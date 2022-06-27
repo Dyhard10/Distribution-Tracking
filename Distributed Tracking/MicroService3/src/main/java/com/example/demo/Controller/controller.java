@@ -16,8 +16,8 @@ public class controller {
     RestTemplate restTemplate;
     @GetMapping("/bank1")
     public String method1(){
-        LOG.info("In the 3rd Microservice");
-        String baseUrl = "http://localhost:8084/userdetail";
+        LOG.info("In the 3rd Microservice.......Method1");
+        String baseUrl = "http://localhost:8084/userdetail1";
         String response = (String) restTemplate.exchange(baseUrl, HttpMethod.GET, null, String.class).getBody();
         LOG.info("The response received by method1 is " + response);
         return response;
@@ -25,16 +25,16 @@ public class controller {
 
     @GetMapping("/bank2")
     public String method2(){
-        LOG.info("In the 3rd Microservice");
-        String baseUrl = "http://localhost:8084/userdetail";
+        LOG.info("In the 3rd Microservice......Method2");
+        String baseUrl = "http://localhost:8084/userdetail2";
         String response = (String) restTemplate.exchange(baseUrl, HttpMethod.GET, null, String.class).getBody();
         LOG.info("The response received by method2 is " + response);
         return response;
     }
     @GetMapping("/bank3")
     public String method3(){
-        LOG.info("In the 3rd Microservice");
-        String baseUrl = "http://localhost:8084/userdetail";
+        LOG.info("In the 3rd Microservice..... Method3");
+        String baseUrl = "http://localhost:8084/userdetail3";
         String response = (String) restTemplate.exchange(baseUrl, HttpMethod.GET, null, String.class).getBody();
         LOG.info("The response received by method3 is " + response);
         return response;
